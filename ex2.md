@@ -12,4 +12,6 @@ Car car2 = car1;
 ```
 car1 i car2 to dwie **zmienne** wskazujące na ten sam **obiekt**.
 
-![Image description](C:\Users\barte\javaStart\WorkHome\3\Annotation 2020-04-13 214446.png)
+- class UML ex4:
+
+![UML for ex4](https://github.com/kardaszb/homeWokr3/blob/master/Annotation%202020-04-13%20214446.png)
