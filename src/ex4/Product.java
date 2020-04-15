@@ -13,20 +13,20 @@ class Product {
         this.category = category;
     }
 
-    Product(String name, double price, String desc) {
-        this.name = name;
-        this.price = price;
-        this.desc = desc;
+    String showInfo() {
+        return "[ Nazwa produktu: " + name
+                + ", cena: " + price
+                + ", opis: " + desc + " ]";
     }
 
-    void showInfo() {
-        System.out.println(
-                "[ Nazwa produktu: " + name
-                        + ", cena: " + price
-                        + ", opis: " + desc + " ]"
-                        + "[ kategoria: " + category.name
-                        + ", opis: " + category.desc + " ]"
-        );
+    void getProductInfo() {
+        if (null != category.name) {
+            System.out.println(showInfo()
+                    + category.showInfo());
+        } else {
+            System.out.println(showInfo() + "[ !!! brak kategorii !!! ]");
+
+        }
     }
 
 }

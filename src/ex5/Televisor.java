@@ -3,14 +3,12 @@ package ex5;
 class Televisor {
     boolean televisorState;
 
-    boolean turnOn() {
+    void turnOn() {
         televisorState = true;
-        return true;
     }
 
-    boolean turnOff() {
+    void turnOff() {
         televisorState = false;
-        return false;
     }
 
     void showStatus() {

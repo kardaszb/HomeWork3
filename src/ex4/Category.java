@@ -10,6 +10,10 @@ public class Category {
     }
 
     Category() {
+    }
 
+    String showInfo() {
+        return "[ kategoria: " + name
+                + ", opis: " + desc + " ]";
     }
 }

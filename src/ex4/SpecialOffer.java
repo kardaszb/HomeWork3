@@ -28,16 +28,21 @@ class SpecialOffer {
         return periodFromTo = "obowiazuje w okresie: " + today.toString() + " - " + endDate.toString();
     }
 
-    void showInfo() {
-        System.out.println("Rabat: ");
-        System.out.println(
-                "[ Nazwa produktu: " + product.name
-                        + ", cena po rabacie: " + discountAmount()
-                        + ", opis: " + desc
-                        + " -> " + Period() + " ]"
-                        + "[ kategoria: " + product.category.name
-                        + ", opis: " + product.category.desc + " ]"
-        );
-
+    String showInfo() {
+        return "Rabat: \n[ Nazwa produktu: " + product.name
+                + ", cena po rabacie: " + discountAmount()
+                + ", opis: " + desc
+                + " -> " + Period() + " ]";
     }
+
+    void getSpeciallInfo() {
+        if (null != product.category.name) {
+            System.out.println(showInfo()
+                    + product.category.showInfo());
+        } else {
+            System.out.println(showInfo() + "[ !!! brak kategorii !!! ]");
+
+        }
+    }
+
 }
